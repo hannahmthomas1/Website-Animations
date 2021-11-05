@@ -1,0 +1,355 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --maintext-color: #280004;
+  --lightbrown-color: #784e2b;
+  --huntergreen-color: #355a3a;
+  --dustyblue-color: #334e58;
+  --background-color: #fffff8;
+  --overlay-color: rgba(0, 0, 0, 0.2);
+}
+
+main {
+  max-width: 50rem;
+  align-self: center;
+  margin: 0 2rem;
+}
+
+body main {
+  max-width: 60rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Hind", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--maintext-color);
+  background-color: var(--background-color);
+}
+
+picture img {
+  /* hero image is the only img with this class */
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+figure {
+  margin: 0;
+}
+
+/* TEXT */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Alegreya Sans", sans-serif;
+  line-height: 0.9em;
+  margin-top: 2em 0 0 1em;
+}
+
+h2 {
+  color: var(--huntergreen-color);
+  font-size: 2rem;
+}
+
+h1 {
+  color: var(--dustyblue-color);
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+h3 {
+  color: var(--lightbrown-color);
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--dustyblue-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--lightbrown-color);
+}
+
+/* Hero */
+.hero {
+  height: 75vh;
+  position: relative;
+}
+
+.hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--overlay-color);
+}
+
+.hero h1 {
+  margin: 0;
+  color: var(--dustyblue-color);
+  font-size: 6rem;
+  text-shadow: 4px 4px 4px var(--background-color);
+  margin-top: 2rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--dustyblue-color);
+  text-shadow: 1px 1px 3px var(--background-color);
+}
+
+/* Navigation Menu */
+.navigation ul {
+  display: flex;
+  flex-direction: row;
+  color: var(--background-color);
+  background: linear-gradient(#334e58, #253940);
+  margin: 0;
+  height: 55px;
+  list-style-type: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigation a {
+  color: var(--background-color);
+  text-decoration: none;
+  font-size: 1.15rem;
+  border: 2px solid transparent;
+  padding: 0.15rem;
+}
+
+.navigation a:hover {
+  text-shadow: 0.5px 0.5px 0.5px var(--background-color);
+  cursor: pointer;
+  border: 2px solid var(--background-color);
+  transition: 400ms ease;
+}
+
+.noHover {
+  pointer-events: none;
+}
+
+/* Buttons */
+.button {
+  display: flex;
+  height: 50px;
+  width: 130px;
+  background-color: var(--dustyblue-color);
+  border: 2px solid var(--maintext-color);
+  color: var(--background-color);
+  font-size: 1.2rem;
+  /* background: linear-gradient(#334e58, #253940); */
+  border-radius: 25px;
+  text-shadow: 1.5px 1.5px 1.5px rgba(255, 255, 255, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.button p {
+  margin: 0;
+  text-decoration: none;
+}
+
+.button:hover {
+  border: 2px solid #4d4d4d;
+  color: var(--background-color);
+  /* background: linear-gradient(#355a3a, #28432b); */
+  background-color: var(--huntergreen-color);
+  cursor: pointer;
+  transition: 300ms ease;
+}
+
+.button:active {
+  border: 2px solid #4d4d4d;
+  /* background: linear-gradient(#355a3a, #28432b); */
+  background-color: var(--huntergreen-color);
+  box-shadow: 2px 2px 2px var(--maintext-color);
+}
+
+/* Panels */
+.panel {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.panel .image-wrapper {
+  order: -2;
+  flex: 1 1 60%;
+  max-width: 600px;
+  margin: 0;
+}
+
+.panel .text-wrapper {
+  flex: 0 1 40%;
+  margin: 0;
+}
+
+.panel img {
+  height: 100%;
+  object-fit: cover;
+  max-height: 300px;
+  line-height: 0;
+}
+
+.text-wrapper a {
+  flex-grow: 0;
+}
+
+/* aside quote */
+.quote {
+  display: flex;
+  background: var(--huntergreen-color);
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.quote h3 {
+  color: var(--background-color);
+  font-size: 2rem;
+}
+
+/* Card styles */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.card {
+  position: relative;
+}
+
+.cards .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  transition: opacity 300ms;
+}
+
+.cards p {
+  color: var(--background-color);
+  text-align: center;
+  margin: 1rem;
+  text-shadow: 2px 2px 2px var(--maintext-color);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.card:hover .overlay {
+  opacity: 0;
+  transition: 300ms ease;
+}
+
+.form-heading {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form-heading h1 {
+  flex: 1 1 92%;
+}
+
+.form-heading img {
+  flex: 0 0 8%;
+}
+
+/* Loader */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  animation: Rotate 2.4s both infinite linear;
+  align-self: center;
+}
+.path {
+  animation: DrawLine 1.6s both infinite alternate linear;
+  fill: none;
+  stroke: var(--maintext-color);
+  stroke-width: 50;
+}
+@keyframes Rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes DrawLine {
+  0% {
+    stroke-dasharray: 0 126;
+  }
+  100% {
+    stroke-dasharray: 126 126;
+  }
+}
+
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .cards .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (min-width: 900px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+
+  .panel {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .panel h2 {
+    margin: 0;
+  }
+
+  .panel .left {
+    order: -3;
+  }
+}
+
+/* to do: 
+make buttons pretty,
+ play with images (change the flex percentage maybe under the media query from what is above)
+ make text on cards a flexbox to center and make pretty
+  */
